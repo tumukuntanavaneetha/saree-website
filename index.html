@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saree website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!----------------header open ------------------------------------->
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="ds.jpg" alt="logo">
+                </div>
+
+                <div class="nav-links">
+                    <a href="#home"><i class="fa fa-home"></i> Home</a>
+                    <a href="#shop"><i class="fa fa-store"></i> Shop</a>
+                    <a href="#New Collection"><i class="fa fa-star"></i> New collection</a>
+                    <a href="#Trending"><i class="fa fa-fire"></i> Trending</a>
+                    <a href="#Offers"><i class="fa fa-gift"></i> Offers</a>
+                    <a href="#About Us"><i class="fa fa-info-circle"></i> About Us</a>
+                </div>
+
+                <div class="icons">
+                    <a href="#search icon">
+                        <div class="search-container">
+                            <input type="text" id="searchInput" placeholder="Search sarees..."
+                                onkeyup="searchProduct()">
+                            <i class="search-icon" onclick="toggleSearch()">🔍</i>
+                        </div>
+                        <i class="search icon" onclick="toggleSearch()"></i>
+                    </a>
+                    <a href="#heart icon"><span class="heart" onclick="toggleHeart(this)"></span><i
+                            class="fa fa-heart"></i></a>
+                    <a href="#cart icon">🛒 <span class="cart-count" id="cart-count">0</span>
+                        <i class="cart icon"></i></a>
+                    <a href="#user icon"><span class="user-icon" onclick="toggleUserMenu()">👤</span><i
+                            class="user icon"></i></a>
+                    <a href="#bell icon"> <span class="bell-icon" onclick="toggleNotifications()">
+
+                            <span class="count" id="notifyCount">3</span><i class="fa fa-bell"></i></a>
+                </div>
+        </nav>
+    </header>
+    <!----------------header close ------------------------------------->
+    <!-------------------------home page--------------------->
+    <section id="home">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <h1>Welcome To DHANKRUTHI SILKS</h1>
+            <p>Discover Elegance. Discover Tradition.</p>
+            <button class="toggle-btn" onclick="toggleSection()">Click Here</button>
+        </div>
+        <h2>Our Collection</h2>
+        <div class="product-grid">
+
+            <div class="card">
+                <img
+                    src="https://mysilklove.com/cdn/shop/files/9_13a2fb68-c5cd-4def-b2ba-d646b3e33b12.jpg?v=1725089127&width=2048">
+                <h3>Banarasi Silk Saree</h3>
+                <p class="price">4999</p>
+                <button onclick="addToCart('Banarasi Silk Saree', 4999)">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61K7aQfcUaL._AC_UY1100_.jpg">
+                <h3>Kanjeevaram Saree</h3>
+                <p class="price">6499</p>
+                <button onclick="addToCart('Kanjeevaram Saree', 6499)">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.jdmagicbox.com/quickquotes/images_main/designer-chiffon-saree-2007325931-dy2ph6x7.jpg">
+                <h3>Designer Chiffon Saree</h3>
+                <p class="price">2999</p>
+                <button onclick="addToCart('Designer Chiffon Saree', 2999)">Add to Cart</button>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-------------------------shop page--------------------->
+    <!-------------------------New Collection page--------------------->
+    <section id="New Collection">
+
+        <!-- Hero Section -->
+        <section class="new-hero">
+            <h1>✨ New Saree Collections 2026 ✨</h1>
+            <p>Elegant • Traditional • Trending Designs</p>
+            <a href="#collection">
+                <button class="explore-btn">Explore Now</button>
+            </a>
+        </section>
+
+        <!-- Collection Section -->
+        <section id="collection" class="new-collection-container">
+
+            <div class="new-card">
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/sari/3/n/s/free-rugveda-redjp-kanjivaram-sarees-kanjivaram-saree-banarasi-original-imahcst3yhh79hzd.jpeg?q=90"
+                    alt="Bridal Kanjivaram Saree">
+                <h3>Bridal Kanjivaram</h3>
+                <p>₹8,999</p>
+                <button onclick="addToCart">Add to Cart</button>
+            </div>
+
+            <div class="new-card">
+                <img src="https://ilovesarees.com/cdn/shop/files/Premium-Barbie-Pink-Banarasi-Silk-Saree-I-Love-Sarees1.webp?v=1727956731"
+                    alt="Banarasi Silk Saree">
+                <h3>Banarasi Silk</h3>
+                <p>₹5,499</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="new-card">
+                <img src="https://peachmode.com/cdn/shop/files/1_VVINT-ANOKHI4-62713-PEACHMODE.jpg?v=1734090636"
+                    alt="Floral Organza Saree">
+                <h3>Floral Organza</h3>
+                <p>₹3,299</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="new-card">
+                <img src="https://pictures.kartmax.in/live/inside/800x800/sites/9s145MyZrWdIAwpU0JYS/product-images/green_soft_linen_silk_saree_1717668829701.jpg"
+                    alt="Soft Linen Saree">
+                <h3>Soft Linen</h3>
+                <p>₹2,499</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="new-card">
+                <img src="https://snazzyhunt.com/cdn/shop/files/Untitleddesign_1.webp?v=1714149155"
+                    alt="Designer Party Wear Saree">
+                <h3>Designer Party Wear</h3>
+                <p>₹4,799</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="new-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ2IF41lnVRXdy82RbDGa25CPsCllgPIh28-AcBq4wVl9MxXwPDOgk5oDAPdB1SMEKznDOITWepvoqnteXsuVqp6k7gfoapgKn6uoCZ3j4kmrBf3bLNutNvhg"
+                    alt="Cotton Printed Saree">
+                <h3>Cotton Printed</h3>
+                <p>₹1,999</p>
+                <button>Add to Cart</button>
+            </div>
+
+        </section>
+        <!-------------------------New Collection page--------------------->
+        <!-------------------------Tranding page--------------------->
+        <section id="Trending">
+            <header class="collection-header">
+                <h1>✨ New Saree Collection 2026 ✨</h1>
+                <p>Fresh Arrivals | Trending Designs | Premium Quality</p>
+            </header>
+
+            <section class="collection-container">
+
+                <div class="collection-card">
+                    <img src="https://sareewave.com/cdn/shop/files/photo_4_2024-07-12_09-59-28.jpg?v=1721987287"
+                        alt="Banarasi Silk Saree">
+                    <h3>Banarasi Silk Saree</h3>
+                    <p>₹4,999</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="collection-card">
+                    <img src="https://www.vishalprints.in/cdn/shop/files/MEHER-50130-01_6ea07063-07ea-428d-a2b4-46bfc4ff3ae9.jpg?v=1725082960"
+                        alt="Designer Georgette Saree">
+                    <h3>Designer Georgette Saree</h3>
+                    <p>₹3,499</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="collection-card">
+                    <img src="https://clothsvilla.com/cdn/shop/products/B-Vipul-Spatmina-B_3_1024x1024.jpg?v=1698124149"
+                        alt="Kanjivaram Wedding Saree">
+                    <h3>Kanjivaram Wedding Saree</h3>
+                    <p>₹6,999</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="collection-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXw7B3z1-XaL1wec9A7URFda1GxvDqXop3Bg&s"
+                        alt="Soft Cotton Printed Saree">
+                    <h3>Soft Cotton Printed Saree</h3>
+                    <p>₹1,899</p>
+                    <button>Add to Cart</button>
+                </div>
+
+            </section>
+            <!-------------------------Tranding page--------------------->
+            <!-------------------------offers page--------------------->
+            <section id="Offers">
+                <section class="offers-section">
+                    <h2>🎉 Special Saree Offers 🎉</h2>
+
+                    <div class="offers-container">
+
+                        <div class="offer-card">
+                            <span class="discount">30% OFF</span>
+                            <img src="https://trendoye.com/cdn/shop/files/green-premium-ethnic-silk-festive-party-saree-trendoye-DJS-KRSV-RJTLK-871_1800x.jpg?v=1748006082"
+                                alt="Silk Saree Offer">
+                            <h3>Premium Silk Saree</h3>
+                            <p class="price">
+                                <span class="old-price">₹4,999</span> ₹3,499
+                            </p>
+                            <button>Shop Now</button>
+                        </div>
+
+                        <div class="offer-card">
+                            <span class="discount">Buy 1 Get 1</span>
+                            <img src="https://thenmozhidesigns.com/cdn/shop/files/DarkFernCottonSaree_1.jpg?v=1762609663&width=2048"
+                                alt="Cotton Saree Offer">
+                            <h3>Soft Cotton Saree</h3>
+                            <p class="price">
+                                <span class="old-price">₹2,499</span> ₹1,999
+                            </p>
+                            <button>Shop Now</button>
+                        </div>
+
+                        <div class="offer-card">
+                            <span class="discount">Flat 40% OFF</span>
+                            <img src="https://trendoye.com/cdn/shop/files/blue-designer-sequin-fancysaree-trendoye-TSNJ-HFT-SLAS-7802_1800x.jpg?v=1719572292"
+                                alt="Designer Saree Offer">
+                            <h3>Designer Party Wear</h3>
+                            <p class="price">
+                                <span class="old-price">₹5,999</span> ₹3,599
+                            </p>
+                            <button>Shop Now</button>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!-------------------------offers page--------------------->
+                <!-------------------------About Us page--------------------->
+                <section id="About Us">
+                    <section class="about" id="about">
+                        <h2>About Us</h2>
+                        <p>
+                            Royal Sarees brings you the finest traditional and modern saree collections.
+                            We blend tradition with style to give you timeless elegance for every occasion.
+                        </p>
+                    </section>
+
+                    <section class="contact" id="contact">
+                        <h2>Contact Us</h2>
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                        <textarea rows="5" placeholder="Your Message"></textarea>
+                        <button>Send Message</button>
+                    </section>
+
+                    <footer>
+                        <p>© 2026 Royal Sarees | Designed with ❤️</p>
+                    </footer>
+                </section>
+                <!-----------------------About Us page--------------------->
+                <!-------------------------Search icon--------------------->
+                <section id="search icon">
+                    <!-- Navbar -->
+                    <nav class="navbar">
+                        <h2 class="logo">Saree Collection</h2>
+
+                        <div class="search-container">
+                            <input type="text" id="searchInput" placeholder="Search sarees..."
+                                onkeyup="searchProduct()">
+                            <i class="search-icon" onclick="toggleSearch()">🔍</i>
+                        </div>
+                    </nav>
+
+                    <!-- Products -->
+                    <div class="products">
+                        <div class="product">Banarasi Silk Saree</div>
+                        <div class="product">Kanchipuram Saree</div>
+                        <div class="product">Cotton Printed Saree</div>
+                        <div class="product">Wedding Designer Saree</div>
+                    </div>
+                </section>
+                <!-------------------------Search icon--------------------->
+                <!-------------------------heart icon--------------------->
+                <section id="heart icon">
+                    <div class="product-card">
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcREK6j0HrXjvAbfLUNVl4D0CF2wNt-KxJFp8jowyuTtL7MJvXk5MhpzXKVdvZH_sObU33pT4R8OCPLdtXfRc6msuw-6npYf"
+                            alt="Saree">
+                        <h3>Banarasi Silk Saree</h3>
+                        <p>₹2,999</p>
+
+
+                        <span class="heart" onclick="toggleHeart(this)">🤍</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://mangaldeep.co.in/cdn/shop/files/212854_1c6b32bf-4f81-4f2e-ba74-edfc362c78d1.jpg?v=1757413098"
+                            alt="Banarasi Saree">
+                        <h3>Banarasi Silk Saree</h3>
+                        <p class="price">₹4,999</p>
+                        <span class="heart" onclick="toggleHeart(this)">🤍</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://mysilklove.com/cdn/shop/files/9_d2018e6c-c894-44f8-8ba4-e4ae82155ca2.jpg?v=1733398051&width=2048"
+                            alt="Kanjeevaram Saree">
+                        <h3>Kanjeevaram Saree</h3>
+                        <p class="price">₹6,499</p>
+                        <span class="heart" onclick="toggleHeart(this)">🤍</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://resources.indianclothstore.com/productimages/Purple-Chiffon-Plain-Saree-With-Designer-Blouse-29015-A13082024.webp"
+                            alt="Chiffon Saree">
+                        <h3>Designer Chiffon Saree</h3>
+                        <p class="price">₹2,999</p>
+                        <span class="heart" onclick="toggleHeart(this)">🤍</span>
+                    </div>
+                    <script>
+                        function toggleHeart(icon) {
+                            if (icon.innerHTML === "🤍") {
+                                icon.innerHTML = "❤️";
+                            } else {
+                                icon.innerHTML = "🤍";
+                            }
+                        }
+
+
+                    </script>
+                </section>
+                <!-------------------------heart icon--------------------->
+                <!-------------------------cart icon--------------------->
+                <section id="cart icon">
+                    <header>
+                        <h1>🌸 Royal Saree Collection</h1>
+                        <div class="cart">
+                            🛒 Cart: <span id="cart-count">0</span>
+                        </div>
+                    </header>
+
+
+                    <section class="products">
+
+                        <div class="card">
+                            <img src="https://assets.panashindia.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/3/2351sr07-407.jpg"
+                                alt="Silk Saree">
+                            <h3>Banarasi Silk Saree</h3>
+                            <p>₹2,999</p>
+                            <button onclick="addToCart()">Add to Cart</button>
+                        </div>
+
+                        <div class="card">
+                            <img src="https://empress-clothing.com/cdn/shop/files/TFH29011.jpg?v=1715592356&width=1080"
+                                alt="Designer Saree">
+                            <h3>Designer Party Wear Saree</h3>
+                            <p>₹3,499</p>
+                            <button onclick="addToCart()">Add to Cart</button>
+                        </div>
+
+                        <div class="card">
+                            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR2wmouC5UCQsKlQu-CqIBZX06F0BM3QOVn8ZUzcVtZO4kbGdBJ46mDL_29nhbQMbycBqOJfVhJyT5_pq2J_BPKRwyQm0A3aw"
+                                alt="Cotton Saree">
+                            <h3>Cotton Printed Saree</h3>
+                            <p>₹1,499</p>
+                            <button onclick="addToCart()">Add to Cart</button>
+                        </div>
+
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/id/1270784859/photo/pretty-indian-young-hindu-bride-in-studio-shot.jpg?s=612x612&w=0&k=20&c=FabLzRXWCWlRxAARmFhSd9wk6glfR093a8pG13gwQrw="
+                                alt="Wedding Saree">
+                            <h3>Bridal Wedding Saree</h3>
+                            <p>₹5,999</p>
+                            <button onclick="addToCart()">Add to Cart</button>
+                        </div>
+
+                    </section>
+
+                    <script src="script.js"></script>
+
+                </section>
+                <!-------------------------cart icon--------------------->
+                <!-------------------------user icon--------------------->
+                <section id="user icon">
+                    <!-- Navbar -->
+                    <nav class="navbar">
+                        <h2 class="logo">Saree Collection</h2>
+
+                        <div class="user-container">
+                            <span class="user-icon" onclick="toggleUserMenu()">👤</span>
+
+                            <div class="user-dropdown" id="userMenu">
+                                <!-------------------------login page--------------------->
+                                <a href="#Login">Login</a>
+                                <section id="Login">
+
+                                    <form id="loginForm">
+                                        <input type="email" id="loginEmail" placeholder="Email" required><br><br>
+                                        <input type="password" id="loginPassword" placeholder="Password"
+                                            required><br><br>
+                                        <button type="submit">Login</button>
+                                    </form>
+
+                                    <p>Don't have an account? <a href="register.html">Register</a></p>
+
+
+
+                                </section>
+                                <!-------------------------login page--------------------->
+                                <!-------------------------Register page--------------------->
+                                <a href="#Register"></a>
+                                <section id="Register">
+
+                                    <form id="registerForm">
+                                        <input type="text" id="name" placeholder="Full Name" required><br><br>
+                                        <input type="email" id="email" placeholder="Email" required><br><br>
+                                        <input type="password" id="password" placeholder="Password" required><br><br>
+                                        <button type="submit">Register</button>
+                                    </form>
+                                    <p>Already have an account? <a href="login.html">Login</a></p>
+                                </section>
+                                <!-------------------------Register page--------------------->
+                                <!-------------------------order page--------------------->
+                                <a href="#Order">My Orders</a>
+                                <section id="Order">
+                                    <h2>My Orders</h2>
+                                    <p id="welcome"></p>
+                                    <div id="orders"></div>
+                                    <button onclick="logout()">Logout</button>
+                                </section>
+
+                                <!-------------------------order page--------------------->
+                            </div>
+                        </div>
+                    </nav>
+                </section>
+                <!-------------------------user icon--------------------->
+                <!-------------------------bell icon--------------------->
+                <section id="bell icon">
+                    <!-- Navbar -->
+                    <nav class="navbar">
+                        <h2 class="logo">Saree Collection</h2>
+
+                        <div class="notification-container">
+                            <span class="bell-icon" onclick="toggleNotifications()">
+                                🔔
+                                <span class="count" id="notifyCount">3</span>
+                            </span>
+
+                            <div class="notification-dropdown" id="notificationMenu">
+                                <p>🔥 New Silk Sarees Arrived</p>
+                                <p>🎉 20% Off on Wedding Collection</p>
+                                <p>🚚 Your Order Has Shipped</p>
+                                <button onclick="clearNotifications()">Clear All</button>
+                            </div>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-------------------------bell icon--------------------->
+                <footer>
+                    <div id="thankyou-message">
+                        <p>✨ Thank you for visiting our Saree Collection Website ✨</p>
+                    </div>
+                </footer>
+
+</body>
+
+</html>
